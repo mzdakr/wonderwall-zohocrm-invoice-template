@@ -1,0 +1,185 @@
+<div style="font-family:IPAPGothic;">
+  <table border="0" cellspacing="0" cellpadding="0" width="100%" style="background:#fff;padding:2px;">
+    <tbody>
+      <tr>
+        <td>
+          <table border="0" cellspacing="0" cellpadding="0" width="100%" style="border-left:0px solid #dadada;border-right:0px solid #dadada;border-top:0px solid #dadada;border-bottom:0px solid #dadada;padding:10px;background-color:white;">
+            <tbody>
+              <tr>
+                <td valign="top">
+                  <table border="0" cellspacing="0" cellpadding="0" width="100%" style="font-size:18px;">
+                    <tbody>
+                      <tr>
+                        <td valign="top" align="left">
+                          <span class="Apple-style-span" style="font-size: 12px; ">
+                            <span style="font-size: 16px; color: black; font-weight: bold; ">
+                              <span class="Apple-style-span" style="font-weight: normal; font-size: 18px; ">${companyLogo}</span>
+                            <br>
+                              <span class="Apple-style-span" style="font-weight: normal;">
+                                <span class="Apple-style-span" style="font-size: small;">${Organization.Organization Name}</span>
+                              </span>
+                            </span>
+                          <br>
+                            <span class="Apple-style-span" style="font-size: x-small;">${Organization.State}${Organization.City}${Organization.Street}</span>
+                          <br>代表取締役　○○　○
+                          <br>
+                          </span>
+                        </td>
+                        <td style="font-size:12px;color:black;" valign="Bottom" align="left"></td>
+                        <td style="font-size:12px;color:black;" valign="top" align="right">
+                          <span style="font-size:20px;font-weight:bold;">請求書</span>
+                        <br>
+                          <span style="font-size:12px;color:black;">請求日: ${Invoices.Invoice Date}</span>
+                        <br>
+                          <span style="font-size:12px;color:black;">請求書番号 : ${Invoices.Invoice Number}</span>
+                        <br>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                <br>
+                  <span class="Apple-style-span" style="color: rgb(38, 38, 38); font-size: 11px; line-height: 16px; white-space: pre; ">
+                    <span class="Apple-style-span" style="font-size: medium; ">
+                      <font class="Apple-style-span" color="#000000">${Accounts.Account Name}御中
+                      <br>
+                      </font>
+                    </span>
+                    <font class="Apple-style-span" color="#000000"></font>
+                  </span>
+                <br>
+                  <span class="Apple-style-span" style="font-size: small; ">拝啓　貴社ますますご清栄のこととお慶び申し上げます。
+                  <br>下記の通り、ご請求申し上げますのでよろしくお願い致します。　敬具
+                  <br>
+                  <br>
+                    <div style="text-align: center;">記</div>
+                  <br>
+                  </span>
+                  <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                    <tbody>
+                      <tr>
+                        <td width="50%" valign="top" style="border:2px solid #E8E8E8;color:#000;">
+                          <b>
+                            <span class="Apple-style-span" style="font-size: small;">ご請求先:
+                            <br>
+                            </span>
+                          </b>
+                          <span class="Apple-style-span" style="font-size: small;">
+                          <br>${Invoices.Billing Code}
+                          <br>${Invoices.Billing State}${Invoices.Billing City}
+                          <br>${Invoices.Billing Street}</span>
+                        </td>
+                        <td width="50%" valign="top" style="border:2px solid #E8E8E8;color:#000;">
+                          <b>
+                            <span class="Apple-style-span" style="font-size: small;">ご送付先:</span>
+                          </b>
+                          <span class="Apple-style-span" style="font-size: small;">
+                          <br>
+                          </span>
+                          <b>
+                            <span class="Apple-style-span" style="font-weight: normal; ">
+                              <span class="Apple-style-span" style="font-size: small;">
+                              <br>${Invoices.Shipping Code}
+                              <br>
+                              </span>
+                            </span>
+                            <span class="Apple-style-span" style="font-weight: normal; ">
+                              <span class="Apple-style-span" style="font-size: small;">${Invoices.Shipping State}</span>
+                            </span>
+                            <span class="Apple-style-span" style="font-weight: normal; ">
+                              <span class="Apple-style-span" style="font-size: small;">${Invoices.Shipping City}
+                              <br>
+                              </span>
+                            </span>
+                            <span class="Apple-style-span" style="font-weight: normal;">
+                              <span class="Apple-style-span" style="font-size: small;">${Invoices.Shipping Street}</span>
+                            </span>
+                          </b>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                <br>
+                <br>件名：${Invoices.Subject}
+                <br>
+                  <table border="0" cellspacing="0" cellpadding="0" width="100%" style="font-family: Arial, Helvetica, sans-serif;font-size:11px;color:#000;">
+                    <thead>
+                      <tr>
+                        <td style="font-weight:bold;background-color:#eaeaea;border-top:2px solid gray;">商品名</td>
+                        <td style="font-weight:bold;background-color:#eaeaea;border-top:2px solid gray;">商品コード</td>
+                        <td style="font-weight:bold;background-color:#eaeaea;border-top:2px solid gray;">数量</td>
+                        <td align="right" style="font-weight:bold;background-color:#eaeaea;border-top:2px solid gray;">販売価格</td>
+                        <td align="right" style="font-weight:bold;background-color:#eaeaea;border-top:2px solid gray;">合計</td>
+                      </tr>
+                    </thead>
+                    <tbody id="lineItem">
+                      <tr>
+                        <td style="border-bottom:2px dotted #dadada">
+                          <b>${Products.Product Name}</b>
+                        </td>
+                        <td valign="top" style="border-bottom:2px dotted #dadada">&nbsp;${Products.Product Code}</td>
+                        <td valign="top" style="border-bottom:2px dotted #dadada">${Invoices.Qty}</td>
+                        <td valign="top" align="right" style="border-bottom:2px dotted #dadada">${Invoices.List Price}</td>
+                        <td valign="top" align="right" style="border-bottom:2px dotted #dadada">${Invoices.Total}</td>
+                      </tr>
+                    </tbody>
+                    <tbody>
+                      <tr>
+                        <td align="right" colspan="4">小計</td>
+                        <td align="right">
+                          <b>${Invoices.Sub Total}</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="right" colspan="4">値引</td>
+                        <td align="right">${Invoices.Discount}</td>
+                      </tr>
+                      <tr>
+                        <td align="right" colspan="4">税</td>
+                        <td align="right">${Invoices.Tax}</td>
+                      </tr>
+                      <tr>
+                        <td align="right" colspan="4">調整</td>
+                        <td align="right">${Invoices.Adjustment}</td>
+                      </tr>
+                      <tr>
+                        <td align="right" colspan="4" style="border-bottom:2px solid #ccc">
+                          <b>総計</b>
+                        </td>
+                        <td align="right" style="border-bottom:2px solid #ccc;border-top:2px solid #dadada;">
+                          <b>${Invoices.Grand Total}</b>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                <br>
+                <br>
+                  <table border="0" cellspacing="0" cellpadding="5" width="100%">
+                    <tbody>
+                      <tr>
+                        <td style="color:gray;border-top:2px solid gray;">
+                          <b>備考</b>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p style="font-size:12px;  color:gray" wrap="soft">振込先：
+                          <br>XX銀行 △支店
+                          <br>普通 0000000 株式会社XXXXXXX 
+                          </p>
+                          <pre style="color:gray" wrap="soft">
+                          <br>
+                          </pre>
+                          <pre style="color:gray" wrap="soft">${Invoices.Terms and Conditions}</pre>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
