@@ -1,4 +1,4 @@
-# What is this.
+# What this is.
 This is a template for Zoho CRM Invoice.
 
 # How to use
